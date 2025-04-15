@@ -15,11 +15,6 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <ul>
-        <li><a href="#features">Features</a></li>
-      </ul>
-    </li>
-    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -35,3 +30,24 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>  </ol>
 </details>
+
+## Getting started
+
+### Prerequisites
+
+* [Git](https://git-scm.com/downloads)
+* [The Go Programming Language](https://go.dev/dl/)
+
+### Installation
+To install this project using Git, follow these steps:
+
+- Clone the Repository:
+
+```bash
+git clone https://github.com/unf6/vryxen
+```
+- Navigate to the Project Directory:
+
+```bash
+cd vryxen
+```
