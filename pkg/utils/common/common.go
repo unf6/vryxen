@@ -1,11 +1,14 @@
 package common
 
 import (
+	"bytes"
 	"fmt"
 	"math/rand"
+	"net"
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 	"syscall"
 
 	"github.com/shirou/gopsutil/v3/disk"
@@ -91,4 +94,31 @@ func RandString(n int) string {
 		b[i] = letters[rand.Intn(len(letters))]
 	}
 	return string(b)
+}
+
+func GetHWID() (string, error) {
+	cmd := exec.Command("wmic", "csproduct", "get", "UUID")
+	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+
+	out, err := cmd.Output()
+	if err != nil {
+		return "", err
+	}
+
+	return strings.TrimSpace(strings.Split(string(out), "\n")[1]), nil
+}
+
+func GetMAC() (string, error) {
+	interfaces, err := net.Interfaces()
+	if err != nil {
+		return "", err
+	}
+
+	for _, i := range interfaces {
+		if i.Flags&net.FlagUp != 0 && !bytes.Equal(i.HardwareAddr, nil) {
+			return i.HardwareAddr.String(), nil
+		}
+	}
+
+	return "", fmt.Errorf("no MAC address found")
 }
