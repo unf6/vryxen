@@ -41,6 +41,9 @@ func (w *WinSCP) ParseConnections() []LoginPair {
 	var loginPairs []LoginPair
 	key, err := registry.OpenKey(registry.CURRENT_USER, `SOFTWARE\Martin Prikryl\WinSCP 2\Sessions`, registry.ALL_ACCESS)
 	if err != nil {
+		if err == registry.ErrNotExist {
+			return loginPairs
+		}	
 		fmt.Println("Error opening registry key:", err)
 		return loginPairs
 	}
