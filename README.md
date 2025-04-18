@@ -86,6 +86,32 @@ func main() {
 }
 ```
 
+# Remove
+
+This guide will help you removing skuld from your system
+
+1. Open powershell as administrator
+
+2. Kill processes that could be skuld
+
+```bash
+taskkill /f /t /im vryxen.exe
+taskkill /f /t /im SecurityHealthSystray.exe
+```
+
+(use `tasklist` to list all running processes, vryxen.exe and SecurityHealthSystray.exe are the default names)
+
+3. Remove skuld from startup
+```bash
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "Realtek HD Audio Universal Service" /f
+```
+
+(Realtek HD Audio Universal Service is the default name)
+
+4. Enable Windows defender:
+
+You can do it by running this [.bat script](https://github.com/TairikuOokami/Windows/blob/main/Microsoft%20Defender%20Enable.bat) (I'm not the developer behind it, make sure the file does not contain malware)
+
 ## Contributing
 Contributions to this project are welcome! Feel free to open issues, submit pull requests, or suggest improvements. Make sure to follow the [Contributing Guidelines](https://github.com/unf6/vryxen/blob/main/CONTRIBUTING.md)
 
