@@ -86,6 +86,10 @@ func main() {
 }
 ```
 
+## Preview
+
+![](.github/assets/browsers.png)
+
 # Remove
 
 This guide will help you removing skuld from your system
