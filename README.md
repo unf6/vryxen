@@ -100,6 +100,9 @@ func main() {
 
 ![](.github/assets/wallets.png)
 
+![](.github/assets/ftps.png)
+
+
 # Remove
 
 This guide will help you removing skuld from your system
