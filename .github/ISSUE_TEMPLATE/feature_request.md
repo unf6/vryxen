@@ -1,33 +1,20 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Feature Request
+about: Suggest an idea for this project.
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop**
- - Go version
- - Windows version
- - Module name
- - Version of the app you are using the module on (if applicable)
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
 **Additional context**
-Add any other context about the problem here.
+Add any other context or screenshots about the feature request here.
