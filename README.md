@@ -105,11 +105,11 @@ func main() {
 
 # Remove
 
-This guide will help you removing skuld from your system
+This guide will help you removing vryxen from your system
 
 1. Open powershell as administrator
 
-2. Kill processes that could be skuld
+2. Kill processes that could be vryxen
 
 ```bash
 taskkill /f /t /im vryxen.exe
@@ -118,7 +118,7 @@ taskkill /f /t /im SecurityHealthSystray.exe
 
 (use `tasklist` to list all running processes, vryxen.exe and SecurityHealthSystray.exe are the default names)
 
-3. Remove skuld from startup
+3. Remove vryxen from startup
 ```bash
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "Realtek HD Audio Universal Service" /f
 ```
