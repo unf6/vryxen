@@ -154,7 +154,7 @@ If you have any questions or need further assistance, please contact [@xretic:ma
 
 ### Important Notice: This tool is intended for educational purposes only.
 
-This software, referred to as skuld, is provided strictly for educational and research purposes. Under no circumstances should this tool be used for any malicious activities, including but not limited to unauthorized access, data theft, or any other harmful actions.
+This software, referred to as xretic, is provided strictly for educational and research purposes. Under no circumstances should this tool be used for any malicious activities, including but not limited to unauthorized access, data theft, or any other harmful actions.
 
 ### Usage Responsibility:
 
