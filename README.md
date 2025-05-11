@@ -51,6 +51,9 @@ git clone https://github.com/unf6/vryxen
 ```bash
 cd vryxen
 ```
+
+> https://www.youtube.com/watch?v=wM5A8ew2EO0&t=5s
+
 ## Usage
 
 You can use the Project template:
