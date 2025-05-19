@@ -8,6 +8,12 @@
 <h1 align="center">Vryxen Stealer</h1>
 <p align="center">Go-written Malware Targeting Windows systems, extracting User Data from Browsers, Crypto Wallets and more, from every user on every disk.</p>
 
+<div style="text-align: center;">
+  <a href="https://t.me/vryxen">Vryxen</a>
+  <a href="https://t.me/vryxenchat">Vryxen Chat</a>
+  
+</div>
+
 
 ---
 
