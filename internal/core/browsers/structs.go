@@ -24,6 +24,7 @@ type Profile struct {
 	CreditCards []CreditCard
 	Downloads   []Download
 	History     []History
+	Autofill    []Autofill
 }
 
 type Login struct {
@@ -60,4 +61,9 @@ type History struct {
 	URL           string
 	VisitCount    int
 	LastVisitTime int64
+}
+
+type Autofill struct {
+	Name    string
+	Value   string
 }
