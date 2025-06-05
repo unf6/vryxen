@@ -158,8 +158,6 @@ func Run(botToken string, chatID string) {
 
 	message := "Link: \n" + fileData.DownloadPage + "\nPassword: \n" + password
 
-	fmt.Println(message)
-
 	requests := requests.Send2TelegramMessage(botToken, chatID, message)
 	if requests != nil {
 		log.Fatalln(requests)
