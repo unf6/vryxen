@@ -25,6 +25,7 @@ type Profile struct {
 	Downloads   []Download
 	History     []History
 	Autofill    []Autofill
+	Bookmark    []Bookmark
 }
 
 type Login struct {
@@ -65,5 +66,10 @@ type History struct {
 
 type Autofill struct {
 	Name    string
+	Value   string
+}
+
+type Bookmark struct {
+	Name 	string
 	Value   string
 }
