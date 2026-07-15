@@ -1,13 +1,13 @@
 module github.com/unf6/vryxen
 
-go 1.24.2
+go 1.25.0
 
 require (
 	github.com/alexmullins/zip v0.0.0-20180717182244-4affb64b04d0
 	github.com/shirou/gopsutil/v3 v3.24.5
 	golang.design/x/clipboard v0.7.0
-	golang.org/x/crypto v0.45.0
-	golang.org/x/sys v0.38.0
+	golang.org/x/crypto v0.52.0
+	golang.org/x/sys v0.45.0
 	modernc.org/sqlite v1.37.0
 )
 
